@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>打算竞破防了怎么办（this is an uncompleted post,do not read it） | Hexo</title>
+    <meta name="author" content="WRYYY" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avatar.png" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+<script src="/js/lib/math.js"></script>
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha512-fHwaWebuwA7NSF5Qg/af4UeDx9XqUpYpOGgubo3yWu+b2IQR4UeQwbb42Ti7gVAjNtVoI/I9TEoYeu9omwcC6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.2"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>HEXO</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;HEXO</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>打算竞破防了怎么办（this is an uncompleted post,do not read it）</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2026/8/17
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/%E6%95%B4%E6%B4%BB/" style="color: #00a596">
+                    整活
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>参考文献：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1SN4y1P77f?vd_source=38f746e2ec7ab5fcdb04e219eb9cdafc">中二电波台 - TV2 看动漫破防了怎么办？二次元精神内耗的自救方法</a></p>
+<p>女士们，先生们，人生是艰难的，卷绩点的生活令人疲惫，所以我们才会痴迷算法竞赛，在幻想乡的世界里，寻找如天堂一样的幸福与快乐。<br>但是如果有一天，算竞也发生了猝不及防的不幸事，击碎了你美好的幻想，让你破防了该怎么办？</p>
+<span id="more"></span>
+
+<p>最近几年，因打算竞而破防的萌萌 ACMer<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow></mrow><mrow><mo stretchy="false">[</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></msup></mrow><annotation encoding="application/x-tex">^{[1]}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.888em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.888em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">[</span><span class="mord mtight">1</span><span class="mclose mtight">]</span></span></span></span></span></span></span></span></span></span></span></span> 数量快速上升。<br>他们先是痴迷于某个算法，沉浸于优化和 AC<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow></mrow><mrow><mo stretchy="false">[</mo><mn>2</mn><mo stretchy="false">]</mo></mrow></msup></mrow><annotation encoding="application/x-tex">^{[2]}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.888em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.888em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">[</span><span class="mord mtight">2</span><span class="mclose mtight">]</span></span></span></span></span></span></span></span></span></span></span></span> 的快感里，随后被出题人的神秘题目当头一棒，即刻出锅，瞬间破防，还成为了众多 ACMer 的笑柄。<br>最后他们在巨大的打击里，嗷的一声疯掉了。<br>成为了只会打板子的蒟蒻<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow></mrow><mrow><mo stretchy="false">[</mo><mn>3</mn><mo stretchy="false">]</mo></mrow></msup></mrow><annotation encoding="application/x-tex">^{[3]}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.888em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.888em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">[</span><span class="mord mtight">3</span><span class="mclose mtight">]</span></span></span></span></span></span></span></span></span></span></span></span> 和只会在一旁流口水的奶龙<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow></mrow><mrow><mo stretchy="false">[</mo><mn>4</mn><mo stretchy="false">]</mo></mrow></msup></mrow><annotation encoding="application/x-tex">^{[4]}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.888em;"></span><span class="mord"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.888em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">[</span><span class="mord mtight">4</span><span class="mclose mtight">]</span></span></span></span></span></span></span></span></span></span></span></span>。<br>或是沉迷二次元，或是痴迷女装，聊以自慰，病情不断恶化，最终无可救药。<br>这就叫做算法竞赛精神病，简称精算病。<br>精算病是这样引起的，如何预防和治疗精算病呢？<br>作为 ACM 界的被破防专家，<em>WRYYY</em>，在本篇文章里就来和大家谈一谈，</p>
+<h1>
+<div style="text-align: center;">
+打算竞破防了怎么办？  
+</div>
+</h1>
+<div style="text-align: right;">
+——ACMer 精神内耗的自救方法
+</div>
+
+<p>首先我们来说一下算法竞赛精神内耗的六大原因</p>
+<p>以上六点就是二次元的最常见的破防的原因</p>
+<p>下面我们来介绍一下二次元破防的五个阶段</p>
+<p>第一个阶段否认</p>
+<p>最不幸的事情最终还是发生了<br>无论是突然发生还是蓄谋已久<br>总之它就是发生了<br>最先的情报往往是比较模糊的<br>这个时候你一定会觉得一切都是假的<br>否定信息来源的真实性<br>比如玛丽才不会和小受在一起<br>EVA中的枪版是假的<br>鬼灭剧场版才不会200亿<br>票房数据什么的都是假的<br>以及算才不会B级情报哥和预告全都是假的<br>等等等等<br>他们拒绝接受现实<br>拒绝改变<br>甚至会进行一些仪式性的活动<br>来重温日常的生活<br>让自己相信这个世界并没有发生变化<br>比如在腿上继续搜刮千种的同人图<br>在抖音上反反复复刷TPP举高高水族馆<br>把散播B级谣言的群友全都踢出去等等<br>并且抓着鸡毛蒜皮细节来解释和论证<br>仿佛一切都没有发生<br>一切都是美好的样子</p>
+<p>第二个阶段愤怒</p>
+<p>现代社会的人终究是被信息包围<br>生物骗得了一时<br>骗不了一世<br>当一切可怕的传言最终实锤的时候<br>当你意识到最坏的事情已经发生了的时候<br>这是你破防的情绪总爆发的时候<br>你开始激烈的宣泄你愤怒的情绪<br>包括问候stop全家<br>问候这个脱单的世界<br>甚至还会问候自己<br>你会要求他人对这个事情负责<br>会反复强调错的是<br>世界会通过评论和打算来出气<br>甚至会伤害到围观的人<br>如果有条件的话<br>你甚至还会大打出手<br>比如去荒坂塔里刷爆重锤</p>
+<p>第三个阶段恳求</p>
+<p>这个阶段是冷静下来的<br>你和无情的手讨价还价<br>试图改变现状的过程<br>比如希望作者能在后日谈里补完结局<br>或者寄希望于动画能够魔改漫画的结局<br>找一条救赎的道路<br>大声的对slab说<br>自己不会推定BD求求你们第二季搞真百合<br>甚至希望另一个手游改编动画能够塞爆王之力<br>大卖88万8<br>把某个动画第二季P1下神坛<br>在大多数情况下<br>这个阶段都是破防的<br>你和空气斗智斗勇<br>讨价还价的过程只是一种无用功</p>
+<p>第四个阶段沮丧</p>
+<p>沮丧是每一个破防的阿宅肯定会经历的过程<br>它代表着你放弃了任何的抵抗<br>完全承担这份痛苦<br>这是一个相当长时间的阶段<br>在这个阶段你整个人仿佛被掏空了一样<br>丧失了精神和活力<br>在玉龙倍感后悔<br>后悔看这个动画<br>后悔自己没有急着跳车<br>后悔自己没有听那些动漫高手的劝解<br>你没有自己<br>你觉得自己就是个虫子<br>觉得自己很傻<br>很天真<br>觉得那些up主都是骗子<br>你会再次拒绝各种消息源<br>删掉各种app<br>如同人间蒸发一样<br>对任何动漫都提不起劲<br>觉得任何动漫都很烂尾<br>甚至有了要拓展的念头</p>
+<p>第五个阶段接受</p>
+<p>这是最后一个阶段<br>这意味着你已经接受了现状<br>望着那些可恶的大人毫发无伤<br>甚至还在度假<br>你终于抛弃了固有的三无关<br>既然不能改变他<br>那就去享受它<br>你会重新鼓起勇气<br>打开心扉<br>回到那人声鼎沸的慢区猴<br>驱散八和BGM<br>寻找下一个时代的娱乐<br>嘲笑其他破防的老友<br>变成影乐子人的形状<br>在花之塔的歌声中迎来崭新的一天<br>但是我们都明白<br>谁都不想成为一个乐子人<br>成为一个无可救药的二次元精神病<br>所以在破防的时候<br>及时进行心理干预和治疗是非常重要的<br>接下来向您介绍几种<br>二次元情绪失控的自救方法<br>抛弃幻想<br>放低期望<br>伟大的二次元哲学家<br>比起谷八幡曾经说过<br>没有希望就没有失望<br>在被各种婆罗门吹爆的动漫坑了无数次之后<br>我们也应该变得更聪明一些<br>不要把所有的爱对着一部动画all in孤注一掷<br>不要有不切实际的期望和赌注<br>免得最后一无所有<br>存在即合理<br>尊重且祝福二次元子很大的自由创作<br>是二次元精神的基石<br>在这个百花齐放的世界<br>有些东西你看不惯其实很正常<br>所以除非你是像up主那样的<br>惹不起大人<br>否则还是要对二次元的各种东西<br>一点包容和理解<br>要承认自己喜欢的东西其实是小众<br>即便你看不惯一些东西<br>也不要去冲他们<br>不要把二次元搞成一言堂<br>而是要给予尊重和祝福<br>这样别人也会尊重和祝福你的言论的<br>不要抱怨去行动<br>当你在为你最喜欢的动漫的垃圾展开<br>和艾美结局破防的时候<br>在为这个辅佐的旧世界而怒吼的时候<br>何不亲手创造一个新世界<br>去开启你同人之路吧<br>同人文化是二次元最闪亮的瑰宝<br>为你最心爱的CP来出现一个你最满意的结局<br>你就完全可以买个10万3000字出版<br>在全市里出人头地<br>成为群里的文豪森林<br>还能火出圈<br>能结局<br>出版能动画化<br>能赚钱<br>上演一出夏亚课上逆袭的神话<br>打不过他们就加入他们<br>人不一定是永远正确的<br>有谁能证明自己就一定比staff更聪明呢<br>被二次元的东西搞坏自己心情毫无必要的<br>我们在二次元寻找的不就是开心嘛<br>所以只要抛弃掉那些虚无的执念<br>加入到这场享受动漫盛宴的狂欢里面<br>和众多开心的粉丝手舞足蹈的时候<br>你会刹那发现天地宽<br>一切都想通了<br>呃<br>才是最重要的<br>打不过他们就加入他们<br>这绝不是什么投降和逃避<br>而是人生的大智慧<br>第一时间转移注意力<br>就像被热水烫伤<br>就要第一时间浇凉水降温一样<br>被动漫搞破防的第一时间就要立刻转移注意力<br>断网退群<br>把那些东西当作空气<br>可以通宵的打游戏<br>文明天际线<br>皮特自萌足球经历<br>欧洲卡车模拟<br>这些一玩一晚上的游戏最适合转移注意力<br>还可以通宵的看动漫<br>看那些你最喜欢的动漫<br>比如红团小南极芳文全家桶<br>甚至鬼灭三马娘<br>间谍过家等等等等<br>这是你补完神作<br>重温经典的最佳机会<br>也可以看看更加大气磅礴的三次元经典<br>比如解放大决战三部曲<br>90年代<br>美国大片在大量的美好的事情灌输之后<br>你应该能治好你的精神内耗<br>以毒攻毒<br>以牙还牙<br>如果你在破防之后迟迟没有走出困境<br>可以考虑尝试一些更极端的做法<br>用真正的悲剧来重刷前作的毒性<br>比如伊犁天空末日三问<br>宇宙骑士星星公主<br>仰望半月夜空<br>和少女终末旅行等大病就用猛药来治<br>灌下去<br>这一大碗毒药之后<br>可能你就会瞬间清醒什么嘛<br>之前我看到暗片还算什么事儿吗<br>精神抗性暴增999<br>你病好吧<br>也更加强大<br>提高自己的知识和水平<br>说以前到1万被一个动漫狗破防<br>是一个萌萌二次元不成熟的表现<br>该跳车的时候不跳车<br>该叠甲的时候不叠甲<br>该当遏制人的时候不当遏制人<br>最后人善被人欺也在所难免<br>所以要成为一个聪明的动漫爱好者<br>就要多看动漫<br>用脑子看动漫<br>不断积累经验<br>提升自己的知识和水平<br>并且也要多听动漫专家高手的意见<br>人总是有极限的<br>动漫高手看过的动画片<br>比你看过的爱情动画片还要多<br>如果自己拿不定主意<br>就要听取专家的意见<br>作业的动漫高手一定比你更会下判断<br>以上就是二次元精神内耗的七个自救方法<br>希望每一个萌萌阿宅能够早日走出困境<br>早日和这个美丽的二次元和解<br>拥抱新的灿烂的一天<br>望着即将到来的4月新番生活<br>难道不还是很有盼头的吗</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2026 Hexo
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;WRYYY
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>
