@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>你好，谢谢，然后是再见 | NOIP2024退役记 | WRYYY</title>
+    <meta name="author" content="WRYYY" />
+    <meta name="description" content="願いはきっと叶うと" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avatar.png" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+<script src="/js/lib/math.js"></script>
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha512-fHwaWebuwA7NSF5Qg/af4UeDx9XqUpYpOGgubo3yWu+b2IQR4UeQwbb42Ti7gVAjNtVoI/I9TEoYeu9omwcC6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.2"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>WRYYY</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;WRYYY</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>你好，谢谢，然后是再见 | NOIP2024退役记</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/12/20
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/%E6%B8%B8%E8%AE%B0/" style="color: #00a596">
+                    游记
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>摘自自己的某篇文章，排版可能有点抽象。</p>
+<p>那篇文章尚未完成，完成的时候会公开，高度二次元相关，大部分人可以不看的 XD。</p>
+<span id="more"></span>
+
+<p>大家再见。</p>
+<h2 id="回忆"><a href="#回忆" class="headerlink" title="回忆"></a>回忆</h2><p>我在高一赛季可以说是完败，无论是 CSP 还是 NOIP 都没有拿到一等，还是在我考前集训过的前提下，CSP 没考好可以说是自己失误，但 NOIP 没考好纯粹就是实力问题了。说实话当时因为还残留着初中班主任打压竞赛的余悸，我以为我会被压力退役，但是并没有，我的班主任还和我说建议我再搞一年，我当时就和他说我本来也准备这样，直到现在他也在支持我竞赛，真的很感谢他。</p>
+<h2 id="现在"><a href="#现在" class="headerlink" title="现在"></a>现在</h2><p>现在 NOIP2024 已经结束，考出了严重低于 CSP 发挥的水平，考场上因为 T1 写了很久都没写出来，让我第一次感受到何为『强烈的紧张感』，不仅是心跳加速，我甚至有一点呼吸困难，这让我根本没心思去写后面的题目，好不容易平静下来，我却依旧不愿舍弃 T1，但是我还是往后写了，看到 T2 暴搜比较难写，但是 A 性质特别好拿，于是写完了直接跳，T3 也不太好写，所以直接看 T4，发现 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo separator="true">,</mo><mi>q</mi><mo>≤</mo><mn>5000</mn></mrow><annotation encoding="application/x-tex">n,q\le 5000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8304em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0359em;">q</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">5000</span></span></span></span> 可以大力树剖加线段树，想写但怕要调，此时时间已经不多了，于是给自己规定了在 20min 内一定要写完调完，从结果上说，没有调完，但是也是在 25min 左右过了该过的大样例，然后我想着如果能写出 T1 的话就还有救，于是接着内耗 T1，结果是残酷的，我直到最后都没调出来，大样例始终有两组无法通过。</p>
+<p>出考场的时候很难受，看到有人哭了，但是不知道我为什么没有哭，估计是大脑已经知道结束了，但身体还没反应过来，到学校门外后有点忍不住了，有点眼泪在打转，但是还是没哭，我不太想让大家看见我哭的样子，教练估计看我情况不太对，就过来安慰我，本来不想哭的，但最终没忍住，我还是哭了。</p>
+<p>我真的很不甘心，我真的很不甘心，我真的很不甘心。</p>
+<p>这是我第一次饱尝失败的感觉，我这么久以来，我很多事情无论好坏我其实都可以当做无所谓，一下就过去了，我会对我要做的事情付出行动，但我并不会很在乎，一直都可以抱着无所谓，过去的就让他过去了的态度，但是这次我真的没办法抱着这样的态度对待这个结果。</p>
+<p>真的，这就好像你生活中本来很平常的东西突然不在了，和你玩了很久的朋友走了，是很痛苦的失去。</p>
+<p>我 OI 学了大概 5 年了，从小学六年级接触到现在退役，我很喜欢 OI 中很多的人和事，但是现在我就要离开他们了。</p>
+<p>作为一个弱省 OIer，我自己的实力并不强，和我的一众学长以及同级相比都是不够的，即便如此，我也在不停的前进。自从我接触 OI 开始，我的寒暑假以及各种节假日都有在学校集训的安排。而上了高中后，因为要备战 NOIP，我们学校会组织外培，我高中生活的两次运动会都已被 Pass，我的 whk 也有所耽误，而我和班上同学交流不多一部分是因为我自己的性格，一部分也可以说因为 OI，但是你要问我会不会后悔选择 OI 这条路，我会说我不会后悔。从一个方面看处于弱省的我学习 OI 势必会影响我的『正常学习生活』，但是从另一个方面上看，OI 真的给了我太多，不仅是获得了特殊的思考角度，获得了一种技能，更重要的是，让我学会了鼓捣各种东西，很多我东西我不学 OI 我可能都完全不知道，甚至是这辈子用不到，很可能到时候真的就成为了连解压都不会的人。</p>
+<p>还是结束了，属于我的幕布已经落下，说实话我真的很不想退役，我可能没和任何人讲过，但是明眼人肯定都看得出来，我是朝着省队线冲刺的，不然我没必要再在高二出去外培一个月，估计就是我对自己期望过大，导致自己压力过大，进而导致考试心态爆炸，现在落的个一等都没了的下场。CSP 省内靠前的甚至全国也还算不差的排位给了我太大的希望，现在已经不剩任何了。</p>
+<p>一个不好的结果，一个让人感到遗憾的结果，一个无法挽回的结果。</p>
+<p>我还是从中毕业了，谢谢所有我遇见的人，我也对一直支持我的老师感到抱歉，我辜负了您对我的期望。</p>
+<p>我终究辜负的还是我自己。</p>
+<p>但，我不后悔。</p>
+<h2 id="写在-NOIP2024-后"><a href="#写在-NOIP2024-后" class="headerlink" title="写在 NOIP2024 后"></a>写在 NOIP2024 后</h2><p>这几天听了很多人安慰我的话，大多都是叫我干脆忘记，过去的就让他了，挫折是宝贵的经验之类的。</p>
+<p>但哪里有这么容易啊。</p>
+<p>不说别的，OI 这种思考方式已经深入脑中了，根本没办法忘记。有同学叫我推数列通项，我看太复杂了推不出来，让他告诉我结果看他直接给我一个包含求和的式子，我就说都有递推了这个没什么用，我当时就差和他说你这个式子也是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0278em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> 的了。</p>
+<p>包括 szzjz 叫我去写概率那章有一个问题说怎样排列可以使期望最大，他说是国王游戏，我一开始拒绝了，但是发现数学课真没啥听的就还是写了。</p>
+<p>怎么忘？很蓝的辣。</p>
+<p>这几天的晚自习也是效率低下，总是会想到退役了之类的，可能突然就在精神上感到一种无力感，进而就导致我身体上都随之相应，我明明四肢都有力，但是就是被自己给束缚了。有时候也出现了考场上症状的延续，可能会有略微的不知道怎么描述的生理上的难受的感觉，应该是和呼吸有关。</p>
+<p>这几天也一直在想，可能我考场上出现这种症状已经有预兆了。我从来没有过这样的感觉，所以我不知道该如何应对，只能深呼吸；我也从来没有这么看重一个东西；我之前也会想到一个东西就会不由自主地往下想下去，尤其是负面情绪，就好像现在我想 OI 一样。</p>
+<p>说实话想到这个事情我就又会产生自责的心理，真成负面循环了。</p>
+<p>出成绩后，当天晚上就做了个梦，梦到我还能去考省选，梦当然都是虚幻不真实的，我梦到了一些不该在赛场上出现的人，也梦到了在考试途中甚至能去吃完饭再回去考，梦到有一个试题是写诗，我甚至写出来了。省选结果却还是失败，但梦里的我好像很开心的样子。</p>
+<p>作为一个 OIer，我的一生真的是失败，没有去过任何大型赛事的现场，没有拿过 NOIP 一等，甚至唯一一次省选参赛都还是体验赛。</p>
+<p>唉。也没什么好说的了。</p>
+<p>从各种角度上讲，NOIP2024 都在我的人生中留下了浓墨重彩的一笔，我可能一辈子都忘不了了。</p>
+<p>真的成为 whk 选手了。</p>
+<p>这篇文章怎么说呢，我虽然取了这个标题，但是完全没有说对谁的你好或者谢谢，完全是我个人负面情绪的倾倒，这边抱歉了。</p>
+<p>以后可能时不时打一打 AT 之类写写简单题什么的，当游戏玩了。</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2026 WRYYY
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;WRYYY
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

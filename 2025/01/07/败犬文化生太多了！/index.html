@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>败犬文化生太多了！ | WRYYY</title>
+    <meta name="author" content="WRYYY" />
+    <meta name="description" content="願いはきっと叶うと" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avatar.png" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+<script src="/js/lib/math.js"></script>
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha512-fHwaWebuwA7NSF5Qg/af4UeDx9XqUpYpOGgubo3yWu+b2IQR4UeQwbb42Ti7gVAjNtVoI/I9TEoYeu9omwcC6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.2"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>WRYYY</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;WRYYY</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>败犬文化生太多了！</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/1/7
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/%E6%9D%82%E9%A1%B9/" style="color: #00bcd4">
+                    杂项
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>因为想不到什么好名字了所以使用这个看起来有点过于凄凉的标题。</p>
+<p>退役以后好久没写博客，想保持写博客的习惯，所以干脆来写写自己退役过后的文化课生活，当然文化课方面的学术也还是会写的。</p>
+<p>希望当成鲜花来写，所以随便写点就是了。</p>
+<span id="more"></span>
+
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wryyy-233/p/18658460">博客园指路</a></p>
+<h2 id="2025-1-7"><a href="#2025-1-7" class="headerlink" title="2025.1.7"></a>2025.1.7</h2><p>创建此文章。</p>
+<p>明天期末考！</p>
+<p>可能？会有个好的结果？</p>
+<h2 id="2025-1-8"><a href="#2025-1-8" class="headerlink" title="2025.1.8"></a>2025.1.8</h2><p>期末第一天，感觉不错。</p>
+<p>语文作文题感觉在骂我，但是我没有证据，于是在自己的作文里好好地骂了自己。</p>
+<p>过几天放作文题上来。</p>
+<p>化学跳了两个计算小空，勉强还算写完？最后 2min 极限配平电极方程式。</p>
+<p>生物感觉偏简单，提前 30min 写完，孩子们什么时候可以把生物的时间分给化学呢。</p>
+<p>明天英语物理数学，希望不要翻车了。</p>
+<h2 id="2025-1-10"><a href="#2025-1-10" class="headerlink" title="2025.1.10"></a>2025.1.10</h2><p>昨天考完就光顾着打摆了没时间写了谔谔。</p>
+<p>英语正常发挥，物理爆炸。</p>
+<p>数学出现了人才改卷，nmd 第一道大题啊，第一道大题你还真能改错啊，直接给我多扣 9 分。</p>
+<p>还有生物，改出来的比我自己估的低了接近 10 分，what can i say?</p>
+<p>还有那个天才卷积 19 题，题面疑似有点太唐了，不知道这么简单的题为什么能在第 19 题，你的新定义疑似有点过于魔怔了。</p>
+<p>总的来说还算差不多，年排 50，联排达到前 10% 的样子。</p>
+<p>过几天把唐人题面搬一下，我认为按照严格的题面审核这玩意完全不能过审。</p>
+<h2 id="2025-1-11"><a href="#2025-1-11" class="headerlink" title="2025.1.11"></a>2025.1.11</h2><p><img src="https://z4a.net/images/2025/01/10/5cc1c7714e0a007a5b7b497a501c67e9.png"></p>
+<p>请允许我先修改以下题面并进行解读加精简使其变得好看。</p>
+<p>题干：</p>
+<p>对于函数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><mi>g</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(x),g(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.1076em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0359em;">g</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span>，定义其卷积为函数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>x</mi></msubsup><mi>f</mi><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo><mi>g</mi><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo>−</mo><mi>i</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><mi>x</mi><mo>∈</mo><msup><mi mathvariant="double-struck">N</mi><mo>∗</mo></msup></mrow><annotation encoding="application/x-tex">h(x)=\sum\limits_{i=1}^xf(i)g(x+1-i),x\in \N^*</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">h</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.3291em;vertical-align:-0.9777em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3514em;"><span style="top:-2.1223em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop op-symbol small-op">∑</span></span></span><span style="top:-3.95em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9777em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.1076em;">f</span><span class="mopen">(</span><span class="mord mathnormal">i</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.0359em;">g</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">i</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord"><span class="mord mathbb">N</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6887em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span></span></span></span>，记作 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>∗</mo><mi>g</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>h</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(x)*g(x)=h(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.1076em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0359em;">g</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">h</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span>，交换律显然。</p>
+<p>第一问不改。</p>
+<p>第二问：</p>
+<p>对于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>∈</mo><msup><mi mathvariant="double-struck">N</mi><mo>∗</mo></msup></mrow><annotation encoding="application/x-tex">k\in \N^*</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.0315em;">k</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord"><span class="mord mathbb">N</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6887em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span></span></span></span> 和任意的函数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">F(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.1389em;">F</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span>，定义 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mi>k</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">T_k(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.1389em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.0315em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span> 为：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>T</mi><mi>k</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo fence="true">{</mo><mtable rowspacing="0.16em" columnalign="center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>F</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><mi>k</mi><mo>=</mo><mn>1</mn><mo separator="true">,</mo></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><mi>k</mi><mo>&gt;</mo><mn>1</mn></mrow></mstyle></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex">
+T_k(x)=\left\{\begin{matrix}
+F(x),k=1,\\
+f(x),k&gt;1\\
+\end{matrix}\right.
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.1389em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.0315em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.4em;vertical-align:-0.95em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">{</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.1389em;">F</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0315em;">k</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord">1</span><span class="mpunct">,</span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.1076em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.0315em;">k</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.95em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span>
+
+<p>其中 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo fence="true">{</mo><mtable rowspacing="0.16em" columnalign="center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>0</mn><mo separator="true">,</mo><mi>x</mi><mo>&lt;</mo><mi>k</mi><mo separator="true">,</mo></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>F</mi><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo>−</mo><mi>k</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><mi>x</mi><mo>≥</mo><mi>k</mi></mrow></mstyle></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex">f(x)=\left\{\begin{matrix}0,x&lt;k,\\F(x+1-k),x\ge k\\\end{matrix}\right.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.1076em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.4em;vertical-align:-0.95em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">{</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathnormal" style="margin-right:0.0315em;">k</span><span class="mpunct">,</span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.1389em;">F</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.0315em;">k</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathnormal" style="margin-right:0.0315em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.95em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
+<p>对于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>∈</mo><msup><mi>N</mi><mo>∗</mo></msup></mrow><annotation encoding="application/x-tex">k\in N^*</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7335em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.0315em;">k</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6887em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.109em;">N</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6887em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span></span></span></span> 试求 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mi>k</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">t_k(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.0315em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span> 使得 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mi>k</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>∗</mo><mi>F</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mi>T</mi><mi>k</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">t_k(x)*F(x)=T_k(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.0315em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.1389em;">F</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.1389em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.0315em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span>。</p>
+<p>第三问不改。</p>
+<p>可能还会有点丑，但是我认为好看多了，我个人不能接受的就是题目写卷积不写成函数形式，而写成数列形式，导致其上标下标以及括号排布极度错乱鬼畜，让我看着很难受。</p>
+<p>其实读懂题目就是好做的，第二题可以佷轻易想到构造出这样一个函数：</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>t</mi><mi>k</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo fence="true">{</mo><mtable rowspacing="0.16em" columnalign="center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>0</mn><mo separator="true">,</mo><mi>x</mi><mo mathvariant="normal">≠</mo><mi>k</mi><mo separator="true">,</mo></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>1</mn><mo separator="true">,</mo><mi>x</mi><mo>=</mo><mi>k</mi></mrow></mstyle></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex">
+t_k(x)=\left\{\begin{matrix}0,x\ne k,\\1,x=k\\\end{matrix}\right.
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">t</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.0315em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.4em;vertical-align:-0.95em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">{</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="inner"><span class="mord"><span class="mrel"></span></span></span><span class="fix"></span></span></span></span></span><span class="mspace nobreak"></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathnormal" style="margin-right:0.0315em;">k</span><span class="mpunct">,</span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathnormal" style="margin-right:0.0315em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.95em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span>
+
+<p>wryyy 亲爱的朋友 sakana 就因为丰富的 OI 经验，将原题面中的作为数列变量 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span>，看成了常量，将常量 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span> 看成了变量，致使他错误的认为格式定义与文字叙述定义相冲突，看了半天舍弃了自己的正解。</p>
+<p>第三题更甚，将题目中的柿子列出来就解出来了。</p>
+<p>难度不认为有 19 题的难度，评价为出新定义出魔怔了。</p>
+<h2 id="2025-1-15"><a href="#2025-1-15" class="headerlink" title="2025.1.15"></a>2025.1.15</h2><p>孩子们还要半月考，无敌了。</p>
+<p>今年寒假有两周，第一次拥有这么长的寒假，罕见的。</p>
+<p>退役之后假期变长乐。</p>
+<p>最近好烦，要写特制语文作业（虽然没有硬性要求写多少），每天还要写一堆科目作业，我个人还想学一下微积分，学完再去学物理。</p>
+<p>语文是真的做不来啊啊啊啊啊啊。</p>
+<p>文言文倒还好说，诗歌我是真的写不来，看到诗歌就难受啊啊啊啊啊啊。</p>
+<p>新年的时候打算用自己学到的 HTML 和 CSS 知识做点东西www。</p>
+<h2 id="2025-1-17"><a href="#2025-1-17" class="headerlink" title="2025.1.17"></a>2025.1.17</h2><p>感冒乐。昨天晚自习到现在一直没状态，上午去看了下医生说这炎症反应挺严重的。</p>
+<p>寄寄寄。</p>
+<p>马上就寒假了，目前的计划是<del>没有计划</del>打算年前爆写寒假作业，然后玩玩玩，在过几天看看少年班的报名有没有过审，然后看结果选择是不是要准备一下。</p>
+<p>虽然我这个竞赛成绩已经基本等于没有了，又不看 CSP，火大了。</p>
+<p>想回家玩了。</p>
+<h2 id="2025-1-19"><a href="#2025-1-19" class="headerlink" title="2025.1.19"></a>2025.1.19</h2><p>孩子们玩不了了。</p>
+<p>昨天打针加出去吃饭，今天上午还要打针，我父母都说他们没收我的手机，现在我只能在打针的一个半小时用单手操纵电脑听歌了（悲</p>
+<h2 id="2025-1-21"><a href="#2025-1-21" class="headerlink" title="2025.1.21"></a>2025.1.21</h2><p>孩子们终于半月考了。</p>
+<p>周四上午就可以回家，好耶。</p>
+<p>周三会考完半月考，好像年级上说每个班自己在周三晚上搞新春晚会，别的我不知道，反正我们前后两个班都会搞才艺表演，比较难绷。</p>
+<p>wryyy 的好朋友在隔壁班负责主持，笑。</p>
+<p>我们班主任还没和我们说起这个事，虽然我们早就知道了，于是昨晚在我校党支部副书记的<del>怂恿</del>建议下，我们决定先自己民主公投活动项目，然后再向班主任申请，实在不行先斩后奏的事情其实也不是没干过。</p>
+<p>目前公投出来的结果是看番 XD。</p>
+<p>不太清楚这么多人一起看会看啥，因为可能有老师在场所以感觉蛮多有趣的看不了，众口难调啊。</p>
+<p>这两天少年班的结果应该出来了，可惜我不记得账号在学校里面看不了，只能回家看了，悲。</p>
+<h2 id="2025-2-4"><a href="#2025-2-4" class="headerlink" title="2025.2.4"></a>2025.2.4</h2><p>距离 2024 过去，已经经过了 2 月 4 天。</p>
+<p>为什么春节时间没写博客？</p>
+<p><del>当然是因为在爽玩了！</del></p>
+<p>因为电脑没带到乡下去。</p>
+<p>所以很多要做的事情就泡汤了。</p>
+<p>而且明天就要滚回学校上自主学习了。</p>
+<p>。。。</p>
+<p>寒假好短。</p>
+<p>一个这么短的寒假不知道被压力了几次。</p>
+<p>一个是我父母认为我的期末考好烂，虽然我觉得也就还行罢，不好不坏，分数是低了点，但是排名不会很后，因为整体的卷子都偏难，我的数学还多扣了分。</p>
+<p>还有就是半月考十分地**，本来也打算随便考的。</p>
+<p>另一个是两个少年班的初审都过了，为这个事说了好多次，我倒不觉得有什么必要，后面初试如果一开始能过就过了，一开始不能过就算上十天半个月培训课我觉得也不太行，还不如看看书补补知识点，我感觉就我这个知识点的缺失程度估计连课的听不懂。</p>
+<p>还有 Bushiroad 你真的把绫奈独角兽女士放进 Ave Mujica 里了吗？</p>
+<p>这不对吧，我大祥老师怎么变这样了？我睦头人怎么有双重人格了？一个旧 C 团两个疾病患者，一个家里赔了 168 亿日元，组了乐队后解散违约金全都让外公赔，这还是邦邦吗？</p>
+<h2 id="2025-2-16"><a href="#2025-2-16" class="headerlink" title="2025.2.16"></a>2025.2.16</h2><p>今日考了西安交大少年班考试，好难。</p>
+<p>别说 10% 了，就算改成 40% 我感觉也悬啊。</p>
+<p>本来这几天都是要写博客的，但是现在家里电脑被收了，学校机房也被清了，所以频率会变得极度不稳定，虽然以前也没有稳定过的说。</p>
+<p>手机写真麻烦啊</p>
+<h2 id="2025-2-16-1"><a href="#2025-2-16-1" class="headerlink" title="2025.2.16"></a>2025.2.16</h2><p>今日下雨，本来要上体育课的。</p>
+<p>最近好烦躁，本来想着如果没啥事就放空大脑，做点自己想做的事情，但是考虑到少年班的问题我又要先准备准备，搞得自己比较烦躁。</p>
+<p>然后我们的开学考一推再推，*** 改成月考算了。</p>
+<p>数学的不等式好难做，待定系数法搞不太明白，改天研究研究，正常不等式题基本都能写出来了。</p>
+<p>突然想起来之前好多文章都没完笔，处在隐藏状态，估计有些会是有生之年了。</p>
+<h2 id="2025-2-26"><a href="#2025-2-26" class="headerlink" title="2025.2.26"></a>2025.2.26</h2><p>开学考，但是已经开学三周甚至是两周乐。</p>
+<p>语文作文有点超标，关键字是年轻，我个人解读出勇气作为主题，写到最后 nmd 中二病犯了，罕见地写了有一千字。</p>
+<p>化学比较简单，生物 what can i say?</p>
+<p>原题好多，而且又是 WQ 特有的联考不联改，评价是不赋分唐完了。</p>
+<p>马上就是比较特别的日子了。</p>
+<h2 id="2025-2-28"><a href="#2025-2-28" class="headerlink" title="2025.2.28"></a>2025.2.28</h2><p>地球 ONLINE 17 级达成。</p>
+<p>说实话挺对不起一年前的我，没有达到他的预期罢。</p>
+<p>同时今天出了开学考成绩，不算很好，但是年排还有进步就还好罢。</p>
+<p>语文首次上平均分了谔谔。</p>
+<p>也没什么想写的？</p>
+<h2 id="2025-3-7"><a href="#2025-3-7" class="headerlink" title="2025.3.7"></a>2025.3.7</h2><p>复杂。</p>
+<p>明天要去南昌考少年班初试力，</p>
+<h2 id="2025-3-18"><a href="#2025-3-18" class="headerlink" title="2025.3.18"></a>2025.3.18</h2><p>考完两个少年班的考试之后变得好闲，结果自然是没过的，不然也不会闲。</p>
+<p>感觉有点可惜罢，自己更擅长的数学考得没物理高，最近几次数学周测也是翻车大王。</p>
+<p>后面干嘛呢？</p>
+<p>照样学，照样玩。</p>
+<p>自从电脑被拿走以后就没办法学好多东西了，也没法在家写东西，因为我个人不是很喜欢手写字，也不太喜欢用手机打字，更别说手机也是受管控的而回家也是不足一天的。</p>
+<p>闲。</p>
+<h2 id="2025-3-23"><a href="#2025-3-23" class="headerlink" title="2025.3.23"></a>2025.3.23</h2><p>最近我们班在搞民间新闻周刊，某些板块疑似有点太激进了。</p>
+<p>这玩意甚至搞起官僚制度了，有点抽象。</p>
+<p>其中甚至有二次元板块 w(ﾟДﾟ)w</p>
+<p>这玩意还是“社长”（官僚制度中的某位）提议的。</p>
+<p>但是“主编”（实际发起人加大部分文章摘抄）不会写，上网找和让 deepseek 写都很烂。</p>
+<p>于是 nmd 来找我了。</p>
+<p>有一说一，我们班浓度不高，而且我不是那么有时间的样子。</p>
+<h2 id="2025-4-3"><a href="#2025-4-3" class="headerlink" title="2025.4.3"></a>2025.4.3</h2><p>今日家长会。不知道会讲什么。</p>
+<p>但我们真的被双休政策覆盖了！</p>
+<p>虽然不完全是，但是过得也还算好了。</p>
+<p>这个月本来要参加湖南二联的考试的。但是不明原因取消了，改为参加更靠后一点的高二大联考。</p>
+<p>不管怎么样，能赋分就是好的。</p>
+<h2 id="2025-4-25"><a href="#2025-4-25" class="headerlink" title="2025.4.25"></a>2025.4.25</h2><p>嗨嗨嗨，回来了！</p>
+<p>因为现在九年级学弟需要准备中考，不会再来机房，所以我们那个机房直接拉闸，导致我已经很久没用我的电脑了，也就导致很久没有写博客。</p>
+<p>其实还是有大事值得记录的！</p>
+<p>上周考完了期中考。评价是起飞！！！</p>
+<p>赋分后飞得更高了 XD。</p>
+<p>语文罕见的连续两次考试都上了平均分，这次的作文更是 45min 1000字，写完的时候手要断了。</p>
+<p>英语直接 129，历史最高分，也有试题比较简单的原因罢。</p>
+<p>数学有点寄，不过也还好，但是改错了就很不好，第一道大题全对扣了 9 分，后面加回了 7 分，剩下两分步骤分就算了。</p>
+<p>物理考得不错，但是脑子抽了导致单选第二题错了。</p>
+<p>化学还行，赋分后更是起飞。</p>
+<p>生物不太行，但是赋分就很好了。</p>
+<p>总得搞下来之后是年级第 16。</p>
+<p>然后高了特控线 130 多分，布什？</p>
+<p>我高 130？真的假的？</p>
+<p>联考好啊，赋分好啊，但是不联改差评。</p>
+<h2 id="2025-6-18"><a href="#2025-6-18" class="headerlink" title="2025.6.18"></a>2025.6.18</h2><p>昨天学弟们开始中考，意味着这个机房终于要重新启用了。（其实早都能用了，不过我一直不知道）</p>
+<p>以后写的就会比较勤了。</p>
+<p>接近两个月没写，中间还是发生了蛮多事的。</p>
+<p>包括有第二次期中考，以及我也不记得有没有的大事。</p>
+<p>马上这个学期就要结束了，意味着我也要成为一个真正意义上的高三生了，有佷多变化啊啊啊。</p>
+<p>szzjz 还有一个月左右就要国赛了，在这里祝愿他披荆斩棘，勇夺桂冠！</p>
+<h2 id="2025-6-21"><a href="#2025-6-21" class="headerlink" title="2025.6.21"></a>2025.6.21</h2><p>又是一个周末，最近好烦躁，某些学科的 daily work 就要比正常作业耗时还要多了。</p>
+<p>有时候上课还得调和自己的心态，不要在课上去争那些所谓的争议题。</p>
+<p>烦躁。</p>
+<p>期末考试的日子已经定了，我觉得还是松弛点好，毕竟我的作风就这样，搞得自己太烦躁反而效率会极度低下。</p>
+<h2 id="2025-7-2"><a href="#2025-7-2" class="headerlink" title="2025.7.2"></a>2025.7.2</h2><p>期末考试第一日结算。</p>
+<p>语文：我是42人我是42人我是42人我是42人我是42人，作文42，你值得拥有！选择题感觉不错。兰亭集序没背出来。</p>
+<p>化学：去你的 KOH 啊啊啊啊啊啊，为啥是苯酸钾啊啊啊啊啊啊。时间不够有机合成路线没写完，焯！</p>
+<p>生物：消失的箭头，你是谁？又提前了至少 15min，什么时候生物和化学的时间可以匀一下啊。</p>
+<p>第一日总体一般，看第二日发挥。</p>
+<p>还有这次赋分好评。</p>
+<p>还有这次不联改差评！</p>
+<h2 id="2025-7-3"><a href="#2025-7-3" class="headerlink" title="2025.7.3"></a>2025.7.3</h2><p>期末考试第二日结算。</p>
+<p>数学：孩子们坠机了，直接错半个大题，填空也空两个，这回只有 110 多了。</p>
+<p>物理：孩子们坠机了，直接空半个大题，单选第一题也错了，这回只有 70 多了。</p>
+<p>英语：<del>孩子们坠机了</del>，啊不对，好像还没坠，作文及格就有120，rush!rush!</p>
+<p>第二日总体坠机，化学要滑档了xdm。</p>
+<p>等出成绩罢。</p>
+<h2 id="2025-8-29"><a href="#2025-8-29" class="headerlink" title="2025.8.29"></a>2025.8.29</h2><p>接近两个月了，我又回来了孩子们。</p>
+<p>2025高三开学大联考纪实。</p>
+<p>昨日物理爆炸，虽然题目都做出来了，但发现数据代错了，直接爆炸。</p>
+<p>数学勉强能争，但是也犯唐，痛失 120。</p>
+<p>语文还行，希望能有超常分数。</p>
+<p>今日上午选科，为了弥补物理的爆炸，我为自己设定的目标是赋分后化学 80,生物 90，现在看来这个目标要倒着来了。</p>
+<p>化学水比，生物真的出生，希望生物原始分可以有 70。</p>
+<p>下午英语，希望不要翻车，为了弥补物理的损失希望能有一个 125+，有 130 是再好不过了。</p>
+<p>写于下午。</p>
+<p>孩子们我好像要完蛋了。</p>
+<p>明天中午就会出成绩，什么速度。</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2026 WRYYY
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;WRYYY
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>
